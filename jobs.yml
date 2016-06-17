@@ -7,6 +7,11 @@ jobs:
       - GET: task5-param6064a
       - GET: task5-replica6064
       
+  - name: task5job-manifest6064b
+    type: manifest
+    steps:
+      - GET: task5job-manifest6064a
+      
   - name: task5job-manifest6064c
     type: manifest
     steps:
@@ -24,10 +29,7 @@ jobs:
   - name: task5job-ecsdeploy6064b
     type: ecsDeploy
     steps:
+      - GET: task5job-manifest6064a
       - GET: task5job-manifest6064c
       - GET: task5-ecscluster6064
       
-  - name: task5job-manifest6064b
-    type: manifest
-    steps:
-      - GET: task5job-manifest6064a

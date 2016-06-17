@@ -4,7 +4,7 @@ jobs:
     steps:
       - GET: test6064-image1
       - GET: test6064-dockeroption1
-      #- GET: test6064-param1
+      - GET: test6064-param1
       - GET: test6064-replica2
       
   - name: jobtest6064-ecsdeploy1
@@ -13,8 +13,15 @@ jobs:
       - GET: jobtest6064-manifest1
       - GET: test6064-ecscluster1
       
-  #- name: jobtest6064-manifest2
-  #  type: manifest
-  #  steps:
-    #  - GET: test6064-image2
-    #  - GET: test6064-replica1
+  - name: jobtest6064-manifest2
+    type: manifest
+    steps:
+      - GET: test6064-image2
+      - GET: test6064-replica0
+      - GET: test6064-param2
+      
+  - name: jobtest6064-ecsdeploy1
+    type: ecsDeploy
+    steps:
+      - GET: jobtest6064-manifest2
+      - GET: test6064-ecscluster1

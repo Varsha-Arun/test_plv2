@@ -1,29 +1,28 @@
 jobs:
-  - name: jobtest6064-manifest1
+  - name: jobtest6064-manifest11
     type: manifest
     steps:
-      - GET: test6064-image1
-      - GET: test6064-dockeroption1
-      - GET: test6064-param1
-      - GET: test6064-replica2
+      - GET: test6064-image11
+      - GET: test6064-dockeroption11
+      - GET: test6064-param11
+      - GET: test6064-replica12
       
-  - name: jobtest6064-ecsdeploy1
+  - name: jobtest6064-ecsdeploy11
     type: ecsDeploy
     steps:
-      - GET: jobtest6064-manifest1
-      - GET: test6064-ecscluster1
+      - GET: jobtest6064-manifest11
+      - GET: test6064-ecscluster11
       
-  - name: jobtest6064-manifest2
+  - name: jobtest6064-manifest12
     type: manifest
     steps:
-      - GET: test6064-image2
-      - GET: test6064-replica0
-      - GET: test6064-param2
-      - GET: test6064-dockeroption1
+      - GET: test6064-image12
+      - GET: test6064-replica10
+      - GET: test6064-param12
+      - GET: test6064-dockeroption11
       
-  - name: jobtest6064-ecsdeploy2
+  - name: jobtest6064-ecsdeploy12
     type: ecsDeploy
     steps:
-      - GET: jobtest6064-manifest2
-      - GET: test6064-ecscluster1
-    
+      - GET: jobtest6064-manifest12
+      - GET: test6064-ecscluster11

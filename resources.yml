@@ -1,17 +1,34 @@
 resources:
-  - name: task5-image6064
+  - name: task5-image6064a
     type: image
     integration: cock1-hub #your subs integration for docker hub
     source:
       name: "shiphitchcock1/testsamplenode"
       isPull: false
       tag: latest
+      
+  - name: task5-image6064b
+    type: image
+    integration: cock1-hub #your subs integration for docker hub
+    source:
+      name: "shiphitchcock1/sample_python"
+      isPull: true
+      tag: latest
 
-  - name: task5-dockeroption6064
+  - name: task5-dockeroption6064a
+    type: dockerOptions
+    source:
+      memory: 128
+      cpu-shares: 0
+      portMappings:
+        - 80:80
+        - 5672:5672
+        
+  - name: task5-dockeroption6064b
     type: dockerOptions
     source:
       memory: 64
-      cpu-shares: 256
+      cpu-shares: 64
       portMappings:
         - 80:80
 
@@ -20,7 +37,7 @@ resources:
     source:
       params:
         MONGO_API_URL: "localhost:28017"
-        
+   
   - name: task5-param6064b
     type: params
     source:

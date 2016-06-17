@@ -3,15 +3,15 @@ jobs:
     type: manifest
     steps:
       - GET: test6064-image11
-      - GET: test6064-dockeroption11
-      - GET: test6064-param11
+     # - GET: test6064-dockeroption11
+     # - GET: test6064-param11
       - GET: test6064-replica12
       
-  - name: jobtest6064-ecsdeploy11
-    type: ecsDeploy
-    steps:
-      - GET: jobtest6064-manifest11
-      - GET: test6064-ecscluster11
+ # - name: jobtest6064-ecsdeploy11
+  #  type: ecsDeploy
+   # steps:
+    #  - GET: jobtest6064-manifest11
+     # - GET: test6064-ecscluster11
       
   - name: jobtest6064-manifest12
     type: manifest
@@ -19,10 +19,15 @@ jobs:
       - GET: test6064-image12
       - GET: test6064-replica10
       - GET: test6064-param12
-      - GET: test6064-dockeroption11
+     # - GET: test6064-dockeroption11
       
   - name: jobtest6064-ecsdeploy12
     type: ecsDeploy
     steps:
       - GET: jobtest6064-manifest12
       - GET: test6064-ecscluster11
+      
+  - name: jobtest6064-manifest13
+    type: manifest
+    steps:
+      - GET: jobtest6064-manifest11

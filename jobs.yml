@@ -2,16 +2,30 @@ jobs:
   - name: task5job-manifest6064a
     type: manifest
     steps:
-      - GET: task5-image6064
-      - GET: task5-dockeroption6064
-     # - GET: task5-param6064a
+      - GET: task5-image6064a
+      - GET: task5-dockeroption6064a
+      - GET: task5-param6064a
       - GET: task5-replica6064
       
-  - name: task5job-ecsdeploy6064
+  - name: task5job-manifest6064c
+    type: manifest
+    steps:
+      - GET: task5-image6064b
+      - GET: task5-dockeroption6064b
+     # - GET: task5-param6064b
+      #- GET: task5-replica6064
+      
+  - name: task5job-ecsdeploy6064a
     type: ecsDeploy
     steps:
-      - GET: task5job-manifest6064
-      - GET: test6064-ecscluster11
+      - GET: task5job-manifest6064a
+      - GET: task5-ecscluster6064
+      
+  - name: task5job-ecsdeploy6064b
+    type: ecsDeploy
+    steps:
+      - GET: task5job-manifest6064c
+      - GET: task5-ecscluster6064
       
   - name: task5job-manifest6064b
     type: manifest

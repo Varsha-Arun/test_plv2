@@ -1,5 +1,5 @@
 resources:
-  - name: test6064-image21
+  - name: task5-image6064
     type: image
     integration: cock1-hub #your subs integration for docker hub
     source:
@@ -7,7 +7,7 @@ resources:
       isPull: false
       tag: latest
 
-  - name: test6064-dockeroption21
+  - name: task5-dockeroption6064
     type: dockerOptions
     source:
       memory: 64
@@ -15,35 +15,25 @@ resources:
       portMappings:
         - 80:80
 
-  - name: test6064-param21
+  - name: task5-param6064a
     type: params
     source:
       params:
         MONGO_API_URL: "localhost:28017"
         
-  - name: test6064-param22
+  - name: task5-param6064b
     type: params
     source:
       params:
         FOO: "boo"
         TEST: "beta123"
         
-  - name: test6064-replica21
+  - name: task5-replica6064
     type: replicas
     source:
       count: 1
-      
-  - name: test6064-replica12
-    type: replicas
-    source:
-      count: 2
-      
-  - name: test6064-replica10
-    type: replicas
-    source:
-      count: 0
-      
-  - name: test6064-ecscluster11
+
+  - name: task5-ecscluster6064
     type: ecsCluster
     integration: varsha-ecscluster
     source:

@@ -46,6 +46,11 @@ resources:
     source:
       count: 2
       
+  - name: test6064-replica0
+    type: replicas
+    source:
+      count: 0
+      
   - name: test6064-ecscluster1
     type: ecsCluster
     integration: varsha-ecscluster

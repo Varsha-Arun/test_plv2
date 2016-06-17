@@ -19,9 +19,11 @@ jobs:
       - GET: test6064-image2
       - GET: test6064-replica0
       - GET: test6064-param2
+      - GET: test6064-dockeroption1
       
   - name: jobtest6064-ecsdeploy2
     type: ecsDeploy
     steps:
       - GET: jobtest6064-manifest2
       - GET: test6064-ecscluster1
+    

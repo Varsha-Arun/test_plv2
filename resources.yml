@@ -37,7 +37,7 @@ resources:
     type: dclCluster
     integration: varsha-dcl
     source:
-     name : "varsha-test"
+     name : "test-node"
      
   - name: van-image2
     type: image

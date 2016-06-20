@@ -30,4 +30,4 @@ jobs:
     type: dclDeploy
     steps:
       - GET: van-manifest1
-      - GET: van-dclcluster2
+      - GET: van-dclcluster1

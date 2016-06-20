@@ -4,8 +4,8 @@ jobs:
     steps:
       - GET: van-image1
       - GET: van-dockeroption1
-      - GET: van-param1
-      - GET: van-replica1
+   #   - GET: van-param1
+   #   - GET: van-replica1
       
   #- name: van-manifest2
    #type: manifest

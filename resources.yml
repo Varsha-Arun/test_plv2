@@ -10,7 +10,7 @@ resources:
   - name: van-replica1
     type: replicas
     source:
-      count: 2
+      count: 1
       
   - name: van-dockeroption1
     type: dockerOptions

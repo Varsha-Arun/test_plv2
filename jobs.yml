@@ -26,8 +26,8 @@ jobs:
  #     - GET: task5job-manifest6064a
  #     - GET: task5-ecscluster6064
  
- # - name: van-dcldeploy1
-  #  type: dclDeploy
- #   steps:
-   #   - GET: van-manifest1
-   #   - GET: van-dclcluster1
+  - name: van-dcldeploy1
+    type: dclDeploy
+    steps:
+      - GET: van-manifest1
+      - GET: van-dclcluster1

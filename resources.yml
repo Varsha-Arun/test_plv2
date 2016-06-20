@@ -1,5 +1,5 @@
 resources:
-  - name: van-image6064
+  - name: van-image1
     type: image
     integration: cock1-hub #your subs integration for docker hub
     source:
@@ -7,14 +7,62 @@ resources:
       isPull: false
       tag: latest
       
-  - name: van-replica6064
+  - name: van-replica1
     type: replicas
     source:
-      count: 0
+      count: 1
+      
+  - name: van-dockeroption1
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 64
+      portMappings:
+        - 80:80
 
-  - name: van-ecscluster6064
+  - name: van-param1
+    type: params
+    source:
+      params:
+        MONGO_API_URL: "localhost:28017"
+
+  - name: van-ecscluster1
     type: ecsCluster
     integration: varsha-ecscluster
     source:
       name : "testCL" #name of the cluster we are deploying
       region: "us-west-2"
+  
+  - name: van-dclcluster1
+    type: dclCluster
+    integration: varsha-dcl
+    source:
+     name : "varsha-test"
+     
+  - name: van-image2
+    type: image
+    integration: cock1-hub #your subs integration for docker hub
+    source:
+      name: "shiphitchcock1/samplenod"
+      isPull: true
+      tag: latest
+      
+  - name: van-replica2
+    type: replicas
+    source:
+      count: 2
+      
+  - name: van-dockeroption2
+    type: dockerOptions
+    source:
+      memory: 128
+      cpu-shares: 256
+      portMappings:
+        - 80:3000 
+
+  - name: van-param2
+    type: params
+    source:
+      params:
+        foo: booo
+        api_url: https://api.shippable.co

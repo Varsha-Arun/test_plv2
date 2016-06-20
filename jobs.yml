@@ -1,35 +1,33 @@
 jobs:
-  - name: task5job-manifest6064a
+  - name: van-manifest1
     type: manifest
     steps:
-      - GET: task5-image6064a
-      - GET: task5-dockeroption6064a
-      - GET: task5-param6064a
-      - GET: task5-replica6064
+      - GET: van-image1
+      - GET: van-dockeroption1
+      - GET: van-param1
+      - GET: van-replica1
       
-  - name: task5job-manifest6064b
-    type: manifest
-    steps:
-      - GET: task5job-manifest6064a
+  #- name: van-manifest2
+   #type: manifest
+  #  steps:
+   #   - GET: task5job-manifest6064a
       
-  - name: task5job-manifest6064c
-    type: manifest
-    steps:
-      - GET: task5-image6064b
-      - GET: task5-dockeroption6064b
+#  - name: task5job-manifest6064c
+ #   type: manifest
+  #  steps:
+   #   - GET: task5-image6064b
+    #  - GET: task5-dockeroption6064b
      # - GET: task5-param6064b
       #- GET: task5-replica6064
       
-  - name: task5job-ecsdeploy6064a
-    type: ecsDeploy
+#  - name: task5job-ecsdeploy6064a
+#    type: ecsDeploy
+ #   steps:
+ #     - GET: task5job-manifest6064a
+ #     - GET: task5-ecscluster6064
+ 
+  - name: van-dcldeploy1
+    type: dclDeploy
     steps:
-      - GET: task5job-manifest6064a
-      - GET: task5-ecscluster6064
-      
-  - name: task5job-ecsdeploy6064b
-    type: ecsDeploy
-    steps:
-      - GET: task5job-manifest6064a
-      - GET: task5job-manifest6064c
-      - GET: task5-ecscluster6064
-      
+      - GET: van-manifest1
+      - GET: van-dclcluster1

@@ -1,5 +1,5 @@
 resources:
-  - name: van-image6064a
+  - name: van-image6064
     type: image
     integration: cock1-hub #your subs integration for docker hub
     source:
@@ -10,7 +10,7 @@ resources:
   - name: van-replica6064
     type: replicas
     source:
-      count: 1
+      count: 0
 
   - name: van-ecscluster6064
     type: ecsCluster
